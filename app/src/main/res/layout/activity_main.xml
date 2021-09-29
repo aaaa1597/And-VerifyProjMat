@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:src="@drawable/images"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <SurfaceView
+        android:id="@+id/surfacefull"
+        android:background="#30ff1080"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <SurfaceView
+        android:id="@+id/surface"
+        android:background="#8010ff80"
+        android:layout_marginLeft="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--  回転シークバー -->
+    <SeekBar
+        android:id="@+id/seekrotate"
+        android:max="720"
+        android:progress="360"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/texrotate"
+        android:text="000"
+        android:layout_above="@id/seekrotate"
+        android:layout_marginLeft="100px"
+        android:layout_marginBottom="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--  視点距離 -->
+    <TextView
+        android:id="@+id/txtviewpoint"
+        android:text="視点距離"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/ettviewpoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/txtviewpoint"
+        android:inputType="number"
+        android:singleLine="true"
+        android:text="400" />
+
+    <!--  俯角シークバー -->
+    <SeekBar
+        android:id="@+id/seekdepress"
+        android:max="180"
+        android:progress="90"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="700px"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/texdepress"
+        android:text="000"
+        android:layout_alignParentRight="true"
+        android:layout_margin="100px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
